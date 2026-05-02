@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are you on track for retirement? | Marcus Financial Planning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="phase-dawn">
+
+  <!-- ══ Header ════════════════════════════════════════════════════ -->
+  <header id="site-header">
+    <span class="header-name">Marcus Financial Planning</span>
+    <span class="header-center">Are you on track for retirement?</span>
+    <nav class="header-nav" aria-label="Page sections">
+      <a href="#who">Who it's for</a>
+      <a href="#what">What it does</a>
+      <a href="#design">Design Choices</a>
+      <a href="#process">Process</a>
+    </nav>
+  </header>
+
+  <!-- ══ Hero — full calculator experience ═════════════════════════ -->
+  <section id="hero" aria-label="Retirement calculator">
+
+    <!-- ── Stars overlay (night phase) ── -->
+    <svg id="stars" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <circle cx="42"  cy="28"  r="1.5" fill="white" opacity="0.75"/>
+      <circle cx="118" cy="72"  r="1"   fill="white" opacity="0.50"/>
+      <circle cx="234" cy="15"  r="1.5" fill="white" opacity="0.80"/>
+      <circle cx="367" cy="44"  r="1"   fill="white" opacity="0.60"/>
+      <circle cx="489" cy="18"  r="2"   fill="white" opacity="0.70"/>
+      <circle cx="612" cy="55"  r="1.5" fill="white" opacity="0.85"/>
+      <circle cx="738" cy="31"  r="1"   fill="white" opacity="0.55"/>
+      <circle cx="76"  cy="110" r="1"   fill="white" opacity="0.45"/>
+      <circle cx="155" cy="140" r="1.5" fill="white" opacity="0.65"/>
+      <circle cx="288" cy="95"  r="1"   fill="white" opacity="0.70"/>
+      <circle cx="421" cy="118" r="2"   fill="white" opacity="0.80"/>
+      <circle cx="540" cy="88"  r="1"   fill="white" opacity="0.60"/>
+      <circle cx="677" cy="130" r="1.5" fill="white" opacity="0.75"/>
+      <circle cx="760" cy="98"  r="1"   fill="white" opacity="0.50"/>
+      <circle cx="30"  cy="190" r="1.5" fill="white" opacity="0.55"/>
+      <circle cx="198" cy="205" r="1"   fill="white" opacity="0.70"/>
+      <circle cx="333" cy="175" r="2"   fill="white" opacity="0.85"/>
+      <circle cx="466" cy="210" r="1"   fill="white" opacity="0.60"/>
+      <circle cx="594" cy="183" r="1.5" fill="white" opacity="0.75"/>
+      <circle cx="718" cy="198" r="1"   fill="white" opacity="0.45"/>
+      <circle cx="88"  cy="265" r="1"   fill="white" opacity="0.65"/>
+      <circle cx="220" cy="285" r="1.5" fill="white" opacity="0.80"/>
+      <circle cx="352" cy="248" r="1"   fill="white" opacity="0.55"/>
+      <circle cx="498" cy="272" r="2"   fill="white" opacity="0.70"/>
+      <circle cx="630" cy="256" r="1.5" fill="white" opacity="0.85"/>
+      <circle cx="752" cy="280" r="1"   fill="white" opacity="0.60"/>
+      <circle cx="55"  cy="340" r="1.5" fill="white" opacity="0.75"/>
+      <circle cx="175" cy="358" r="1"   fill="white" opacity="0.50"/>
+      <circle cx="304" cy="325" r="1"   fill="white" opacity="0.65"/>
+      <circle cx="568" cy="310" r="1.5" fill="white" opacity="0.70"/>
+      <circle cx="694" cy="355" r="1"   fill="white" opacity="0.55"/>
+      <circle cx="112" cy="420" r="1"   fill="white" opacity="0.60"/>
+      <circle cx="248" cy="400" r="1.5" fill="white" opacity="0.75"/>
+      <circle cx="384" cy="430" r="1"   fill="white" opacity="0.45"/>
+      <circle cx="516" cy="408" r="2"   fill="white" opacity="0.70"/>
+      <circle cx="652" cy="425" r="1.5" fill="white" opacity="0.85"/>
+      <circle cx="775" cy="415" r="1"   fill="white" opacity="0.60"/>
+      <circle cx="22"  cy="488" r="1.5" fill="white" opacity="0.55"/>
+      <circle cx="148" cy="468" r="1"   fill="white" opacity="0.70"/>
+      <circle cx="282" cy="505" r="1"   fill="white" opacity="0.80"/>
+      <circle cx="418" cy="480" r="2"   fill="white" opacity="0.65"/>
+      <circle cx="546" cy="496" r="1.5" fill="white" opacity="0.75"/>
+      <circle cx="683" cy="510" r="1"   fill="white" opacity="0.50"/>
+      <circle cx="790" cy="475" r="1.5" fill="white" opacity="0.65"/>
+    </svg>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN 0 — Party selection
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-entry" class="screen">
+
+      <div class="stage0-container">
+
+        <!-- Left: title + choices -->
+        <div class="stage0-left">
+          <h1 class="stage-title">Who's making the trip?</h1>
+          <p  class="stage-narrative">The math changes depending on who you're planning for. Pick the setup that fits your life.</p>
+
+          <div class="entry-btns">
+            <button class="entry-btn" data-party="solo">Just me</button>
+            <button class="entry-btn" data-party="duo">Two of us</button>
+            <button class="entry-btn" data-party="family">Family</button>
+          </div>
+        </div>
+
+        <!-- Right: illustration -->
+        <div class="stage0-right">
+          <svg id="stage0-illus" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+            <!-- Solo: one adult, feet at y=260 -->
+            <g id="illus-solo" class="stage0-variant">
+              <circle cx="100" cy="140" r="10" fill="currentColor"/>
+              <line x1="100" y1="160" x2="100" y2="200" stroke="currentColor" stroke-width="3"   stroke-linecap="round"/>
+              <line x1="100" y1="172" x2="82"  y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="100" y1="172" x2="118" y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="100" y1="200" x2="86"  y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="100" y1="200" x2="114" y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Duo: two adults -->
+            <g id="illus-duo" class="stage0-variant">
+              <!-- Left adult -->
+              <circle cx="70" cy="140" r="10" fill="currentColor"/>
+              <line x1="70" y1="160" x2="70"  y2="200" stroke="currentColor" stroke-width="3"   stroke-linecap="round"/>
+              <line x1="70" y1="172" x2="52"  y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="70" y1="172" x2="88"  y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="70" y1="200" x2="56"  y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="70" y1="200" x2="84"  y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Right adult -->
+              <circle cx="130" cy="140" r="10" fill="currentColor"/>
+              <line x1="130" y1="160" x2="130" y2="200" stroke="currentColor" stroke-width="3"   stroke-linecap="round"/>
+              <line x1="130" y1="172" x2="112" y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="130" y1="172" x2="148" y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="130" y1="200" x2="116" y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="130" y1="200" x2="144" y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Family: two adults + child (default) -->
+            <g id="illus-family" class="stage0-variant">
+              <!-- Left adult at cx=55 -->
+              <circle cx="55" cy="140" r="10" fill="currentColor"/>
+              <line x1="55" y1="160" x2="55"  y2="200" stroke="currentColor" stroke-width="3"   stroke-linecap="round"/>
+              <line x1="55" y1="172" x2="37"  y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="55" y1="172" x2="73"  y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="55" y1="200" x2="41"  y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="55" y1="200" x2="69"  y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Child at cx=100 (height 85) -->
+              <circle cx="100" cy="182" r="7" fill="currentColor"/>
+              <line x1="100" y1="196" x2="100" y2="220" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="100" y1="205" x2="88"  y2="216" stroke="currentColor" stroke-width="2"   stroke-linecap="round"/>
+              <line x1="100" y1="205" x2="112" y2="216" stroke="currentColor" stroke-width="2"   stroke-linecap="round"/>
+              <line x1="100" y1="220" x2="90"  y2="260" stroke="currentColor" stroke-width="2"   stroke-linecap="round"/>
+              <line x1="100" y1="220" x2="110" y2="260" stroke="currentColor" stroke-width="2"   stroke-linecap="round"/>
+              <!-- Right adult at cx=145 -->
+              <circle cx="145" cy="140" r="10" fill="currentColor"/>
+              <line x1="145" y1="160" x2="145" y2="200" stroke="currentColor" stroke-width="3"   stroke-linecap="round"/>
+              <line x1="145" y1="172" x2="127" y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="145" y1="172" x2="163" y2="188" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="145" y1="200" x2="131" y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="145" y1="200" x2="159" y2="260" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+
+          </svg>
+        </div>
+
+      </div><!-- /stage0-container -->
+
+      <div class="interactive-zone">
+        <button id="btn-letsgo" class="next-btn hidden">Let's go</button>
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+      </div>
+
+    </div><!-- /screen-entry -->
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN A — Current age
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-a" class="screen stage-screen">
+
+      <svg class="stage-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Sky -->
+        <rect x="0" y="0" width="400" height="220" class="fill-dawn-sky"/>
+        <!-- Sun -->
+        <circle cx="60" cy="65" r="36" class="fill-dawn-earth" opacity="0.9"/>
+        <!-- Mountain -->
+        <polygon points="240,55 370,225 110,225" class="fill-dawn-text" opacity="0.45"/>
+        <!-- Ground -->
+        <rect x="0" y="222" width="400" height="78" class="fill-dawn-grass"/>
+        <!-- Trail (dashed) -->
+        <path d="M32,256 Q120,252 220,248 Q310,244 370,240" stroke="var(--dawn-earth)"
+              stroke-width="3" fill="none" stroke-dasharray="8,6" opacity="0.55"/>
+        <!-- Hiker group (JS injects + translates) -->
+        <g id="hiker-position" transform="translate(32,256)">
+          <g id="hikers-a"></g>
+        </g>
+      </svg>
+
+      <div class="interactive-zone">
+        <h2 class="stage-title">Where are you on the trail?</h2>
+        <p  class="stage-narrative">Starting at 38 and starting at 50 are different trips. Both can get you there — the pace just changes.</p>
+
+        <div class="choice-btns">
+          <button class="choice-btn" data-default="38">Early trail</button>
+          <button class="choice-btn" data-default="50">Mid-journey</button>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-header">
+            <span class="slider-label">Your current age</span>
+            <span class="slider-value" id="val-a">38</span>
+          </div>
+          <input type="range" class="slider-input" id="slider-a"
+                 min="18" max="65" step="1" value="38"
+                 aria-label="Current age">
+        </div>
+
+        <button class="next-btn">Next</button>
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+      </div>
+
+    </div><!-- /screen-a -->
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN B — Target retirement age
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-b" class="screen stage-screen">
+
+      <svg class="stage-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Sky (JS warms fill color) -->
+        <rect id="sky-b" x="0" y="0" width="400" height="300" class="fill-dawn-sky"/>
+        <!-- Sun (JS moves this group) -->
+        <g id="sun-group-b" transform="translate(200,75)">
+          <circle r="38" class="fill-dawn-earth" opacity="0.9"/>
+          <!-- Rays -->
+          <line x1="0" y1="-50" x2="0"  y2="-64" stroke="var(--dawn-earth)" stroke-width="2" opacity="0.5"/>
+          <line x1="50" y1="0"  x2="64" y2="0"   stroke="var(--dawn-earth)" stroke-width="2" opacity="0.5"/>
+          <line x1="-50" y1="0" x2="-64" y2="0"  stroke="var(--dawn-earth)" stroke-width="2" opacity="0.5"/>
+          <line x1="36"  y1="-36" x2="46" y2="-46" stroke="var(--dawn-earth)" stroke-width="2" opacity="0.5"/>
+          <line x1="-36" y1="-36" x2="-46" y2="-46" stroke="var(--dawn-earth)" stroke-width="2" opacity="0.5"/>
+        </g>
+        <!-- Treeline -->
+        <polygon points="0,258 40,205 80,258 120,195 160,258 200,200 240,258 280,192 320,258 360,198 400,258 400,300 0,300"
+                 class="fill-dawn-text" opacity="0.65"/>
+        <!-- Ground -->
+        <rect x="0" y="260" width="400" height="40" class="fill-dawn-grass" opacity="0.7"/>
+        <!-- Hikers at treeline (small — scale 0.32) -->
+        <g id="hikers-treeline" transform="translate(178,264) scale(0.32)">
+          <g id="hikers-b"></g>
+        </g>
+      </svg>
+
+      <div class="interactive-zone">
+        <h2 class="stage-title">What time do you need to make camp?</h2>
+        <p  class="stage-narrative">There's no wrong answer here. But picking a target is what makes the math real.</p>
+
+        <div class="choice-btns">
+          <button class="choice-btn" data-default="62">Before sunset</button>
+          <button class="choice-btn" data-default="67">Just before dark</button>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-header">
+            <span class="slider-label">Target retirement age</span>
+            <span class="slider-value" id="val-b">67</span>
+          </div>
+          <input type="range" class="slider-input" id="slider-b"
+                 min="55" max="80" step="1" value="67"
+                 aria-label="Target retirement age">
+        </div>
+
+        <button class="next-btn">Next</button>
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+      </div>
+
+    </div><!-- /screen-b -->
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN C — Current savings
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-c" class="screen stage-screen">
+
+      <svg class="stage-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Sky (midday — brighter) -->
+        <rect x="0" y="0" width="400" height="215" class="fill-dusk-sky"/>
+        <!-- Ground -->
+        <rect x="0" y="215" width="400" height="85" class="fill-dawn-grass" opacity="0.75"/>
+        <!-- Sun overhead -->
+        <circle cx="200" cy="38" r="28" class="fill-dusk-sun" opacity="0.95"/>
+        <!-- Pack drop shadow (overhead light) -->
+        <ellipse cx="160" cy="234" rx="42" ry="6" fill="var(--dawn-text)" opacity="0.10"/>
+        <!-- Pack empty background -->
+        <rect x="112" y="128" width="96" height="105" rx="10"
+              class="fill-dusk-ember" opacity="0.25"/>
+        <!-- Pack fill (JS drives clip height) -->
+        <defs>
+          <clipPath id="pack-fill-clip">
+            <rect id="pack-clip-rect" x="112" y="233" width="96" height="0"/>
+          </clipPath>
+        </defs>
+        <rect x="112" y="128" width="96" height="105" rx="10"
+              fill="var(--golden)" opacity="0.72" clip-path="url(#pack-fill-clip)"/>
+        <!-- Pack outline -->
+        <rect x="112" y="128" width="96" height="105" rx="10"
+              fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"/>
+        <!-- Pack straps -->
+        <rect x="128" y="122" width="22" height="12" rx="5" fill="currentColor" opacity="0.3"/>
+        <rect x="154" y="122" width="22" height="12" rx="5" fill="currentColor" opacity="0.3"/>
+        <!-- Half-full divider line -->
+        <line x1="112" y1="181" x2="208" y2="181" stroke="currentColor"
+              stroke-width="1" opacity="0.18" stroke-dasharray="4,4"/>
+        <!-- Hikers resting to the right -->
+        <g id="hikers-rest" transform="translate(315,255) scale(0.9)">
+          <g id="hikers-c"></g>
+        </g>
+      </svg>
+
+      <div class="interactive-zone">
+        <h2 class="stage-title">How full is your backpack?</h2>
+        <p  class="stage-narrative">What you've already saved is your starting point. Everything from here builds on it.</p>
+
+        <div class="choice-btns">
+          <button class="choice-btn" data-default="25000">Light supplies</button>
+          <button class="choice-btn" data-default="200000">Well stocked</button>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-header">
+            <span class="slider-label">Current retirement savings</span>
+            <span class="slider-value" id="val-c">$25,000</span>
+          </div>
+          <input type="range" class="slider-input" id="slider-c"
+                 min="0" max="1000000" step="5000" value="25000"
+                 aria-label="Current retirement savings">
+        </div>
+
+        <button class="next-btn">Next</button>
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+      </div>
+
+    </div><!-- /screen-c -->
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN D — Monthly savings
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-d" class="screen stage-screen">
+
+      <svg class="stage-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <!-- Clip sun to sky above mountain silhouette -->
+          <clipPath id="sky-clip-d">
+            <polygon points="0,0 400,0 400,175 360,135 290,205 210,108 130,205 65,125 0,205"/>
+          </clipPath>
+        </defs>
+        <!-- Sky (JS drives fill color) -->
+        <rect id="sky-d" x="0" y="0" width="400" height="300" fill="var(--dusk-sun)"/>
+        <!-- Sun clipped to sky above mountains (JS moves inner group) -->
+        <g clip-path="url(#sky-clip-d)">
+          <g id="sun-group-d" transform="translate(300,164)">
+            <circle id="sun-disc-d" r="26" fill="var(--dusk-ember)"/>
+          </g>
+        </g>
+        <!-- Mountains -->
+        <polygon points="0,205 65,125 130,205 210,108 290,205 360,135 400,175 400,300 0,300"
+                 class="fill-dusk-text" opacity="0.78"/>
+        <!-- Trail -->
+        <path d="M0,272 Q100,260 200,255 Q300,250 400,262"
+              stroke="var(--dawn-earth)" stroke-width="4" fill="none" opacity="0.45"/>
+        <!-- Ground -->
+        <rect x="0" y="268" width="400" height="32" class="fill-dawn-grass" opacity="0.55"/>
+        <!-- Hikers on trail (JS moves left → right) -->
+        <g id="hikers-d-group" transform="translate(20,272)">
+          <g id="hikers-d"></g>
+        </g>
+      </svg>
+
+      <div class="interactive-zone">
+        <h2 class="stage-title">How fast are you moving?</h2>
+        <p  class="stage-narrative">This is the number that moves the most. Small changes here add up more than almost anything else.</p>
+
+        <div class="choice-btns">
+          <button class="choice-btn" data-default="500">Steady pace</button>
+          <button class="choice-btn" data-default="2000">Pushing hard</button>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-header">
+            <span class="slider-label">Monthly savings</span>
+            <span class="slider-value" id="val-d">$500</span>
+          </div>
+          <input type="range" class="slider-input" id="slider-d"
+                 min="0" max="5000" step="50" value="500"
+                 aria-label="Monthly savings">
+        </div>
+
+        <button class="next-btn">Next</button>
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+      </div>
+
+    </div><!-- /screen-d -->
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN E — Annual income
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-e" class="screen stage-screen">
+
+      <svg class="stage-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Sky -->
+        <rect x="0" y="0" width="400" height="300" class="fill-dusk-sky"/>
+        <!-- Ground -->
+        <rect x="0" y="228" width="400" height="72" class="fill-dawn-grass" opacity="0.55"/>
+        <!-- Horizon hills -->
+        <path d="M0,228 Q80,200 160,220 Q240,238 320,212 Q370,200 400,218 L400,228 L0,228 Z"
+              class="fill-dusk-text" opacity="0.30"/>
+
+        <!-- Tent (JS scales around cx=220, cy=210) -->
+        <g id="camp-tent">
+          <!-- Tent body -->
+          <polygon points="150,232 220,157 290,232" fill="var(--dusk-ember)" opacity="0.75"/>
+          <!-- Tent door arch -->
+          <path d="M205,232 Q220,197 235,232 Z" fill="var(--dusk-thread)" opacity="0.5"/>
+          <!-- Tent pole above peak -->
+          <line x1="220" y1="157" x2="220" y2="145" stroke="var(--dusk-thread)" stroke-width="1.5" opacity="0.6"/>
+          <!-- Guy wires -->
+          <line x1="220" y1="145" x2="248" y2="237" stroke="var(--dusk-thread)" stroke-width="1.5" opacity="0.4" stroke-dasharray="3,3"/>
+          <line x1="220" y1="145" x2="192" y2="237" stroke="var(--dusk-thread)" stroke-width="1.5" opacity="0.4" stroke-dasharray="3,3"/>
+          <!-- Ground shadow line -->
+          <line x1="150" y1="232" x2="290" y2="232" stroke="var(--dusk-text)" stroke-width="2" opacity="0.3"/>
+        </g>
+
+        <!-- Camp gear (JS drives opacity) -->
+        <g id="camp-gear" opacity="0">
+          <!-- Folding chair (left of tent) -->
+          <polygon points="140,228 148,208 156,228" fill="var(--dusk-ember)" opacity="0.7"/>
+          <rect x="142" y="218" width="12" height="3" rx="1.5" fill="var(--dusk-thread)" opacity="0.5"/>
+          <!-- Cooler box (far right) -->
+          <rect x="335" y="210" width="32" height="20" rx="3" fill="var(--dusk-text)" opacity="0.6"/>
+          <rect x="337" y="208" width="28" height="6"  rx="2" fill="var(--dusk-thread)" opacity="0.5"/>
+        </g>
+
+        <!-- Fire pit (JS drives opacity) -->
+        <g id="camp-fire-pit" opacity="0">
+          <!-- Ash bed -->
+          <ellipse cx="295" cy="234" rx="22" ry="8" fill="var(--dusk-text)" opacity="0.5"/>
+          <!-- Coal stones -->
+          <circle cx="281" cy="232" r="5" fill="var(--dusk-thread)" opacity="0.6"/>
+          <circle cx="309" cy="232" r="5" fill="var(--dusk-thread)" opacity="0.6"/>
+          <circle cx="295" cy="226" r="5" fill="var(--dusk-thread)" opacity="0.6"/>
+          <!-- Crossed logs -->
+          <rect x="283" y="231" width="24" height="5" rx="2.5" fill="var(--dawn-text)" opacity="0.7"/>
+          <rect x="289" y="228" width="12" height="4" rx="2" fill="var(--dawn-text)" opacity="0.7"
+                transform="rotate(30 295 230)"/>
+        </g>
+
+        <!-- Hikers (JS shifts x toward fire) -->
+        <g id="hikers-e-group" transform="translate(85,252)">
+          <g id="hikers-e"></g>
+        </g>
+      </svg>
+
+      <div class="interactive-zone">
+        <h2 class="stage-title">How big is your camp?</h2>
+        <p  class="stage-narrative">Your income shapes what retirement needs to cost — and how much you can realistically set aside each month.</p>
+
+        <div class="choice-btns">
+          <button class="choice-btn" data-default="80000">Lean camp</button>
+          <button class="choice-btn" data-default="180000">Full camp</button>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-header">
+            <span class="slider-label">Annual household income</span>
+            <span class="slider-value" id="val-e">$80,000</span>
+          </div>
+          <input type="range" class="slider-input" id="slider-e"
+                 min="30000" max="300000" step="1000" value="80000"
+                 aria-label="Annual household income">
+        </div>
+
+        <button class="next-btn">See your result</button>
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+      </div>
+
+    </div><!-- /screen-e -->
+
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SCREEN RESULT — End reveal
+    ══════════════════════════════════════════════════════════════════ -->
+    <div id="screen-result" class="screen">
+
+      <div class="result-card">
+
+        <!-- Campfire SVG -->
+        <svg id="campfire-svg" viewBox="0 0 200 200"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Stone ring -->
+          <circle cx="70"  cy="168" r="6" class="fill-night-slate"/>
+          <circle cx="85"  cy="178" r="5" class="fill-night-slate"/>
+          <circle cx="100" cy="180" r="6" class="fill-night-slate"/>
+          <circle cx="115" cy="178" r="5" class="fill-night-slate"/>
+          <circle cx="130" cy="168" r="6" class="fill-night-slate"/>
+          <circle cx="120" cy="157" r="4" class="fill-night-slate"/>
+          <circle cx="80"  cy="157" r="4" class="fill-night-slate"/>
+          <!-- Logs -->
+          <rect x="65" y="160" width="70" height="10" rx="4"
+                class="fill-night-forest" transform="rotate(-18,100,165)"/>
+          <rect x="65" y="160" width="70" height="10" rx="4"
+                class="fill-night-forest" transform="rotate(18,100,165)"/>
+          <!-- Flames (JS scales this group) -->
+          <g id="campfire-flames" class="fire-small">
+            <!-- Fire base -->
+            <g id="fire-base">
+              <path d="M72,162 C62,136 70,106 82,88 C88,76 96,82 100,66 C104,82 112,76 118,88 C130,106 138,136 128,162 Z"
+                    class="fill-night-fire"/>
+            </g>
+            <!-- Fire mid -->
+            <g id="fire-mid">
+              <path d="M80,160 C74,138 78,114 86,100 C91,89 97,94 100,79 C103,94 109,89 114,100 C122,114 126,138 120,160 Z"
+                    class="fill-night-flame"/>
+            </g>
+            <!-- Fire tip -->
+            <g id="fire-tip">
+              <path d="M88,158 C85,140 88,120 92,108 C95,98 98,104 100,91 C102,104 105,98 108,108 C112,120 115,140 112,158 Z"
+                    class="fill-night-glow"/>
+            </g>
+          </g>
+        </svg>
+
+        <!-- Reveal lines -->
+        <div class="reveal-lines" aria-live="polite">
+          <p class="reveal-line line-bold" id="reveal-1"></p>
+          <p class="reveal-line"           id="reveal-2"></p>
+          <p class="reveal-line"           id="reveal-3"></p>
+          <p class="reveal-line line-bold" id="reveal-4"></p>
+        </div>
+
+        <!-- Path-forward sliders (hidden until reveal complete) -->
+        <div class="path-forward" id="path-forward" style="display:none">
+
+          <div class="path-slider">
+            <div class="slider-header">
+              <span class="slider-label">Monthly savings</span>
+              <span class="slider-value" id="val-path-monthly">—</span>
+            </div>
+            <input type="range" class="slider-input" id="slider-path-monthly"
+                   min="0" max="10000" step="50" value="500"
+                   aria-label="Monthly savings adjustment">
+            <p class="path-description" id="desc-monthly"></p>
+          </div>
+
+          <hr class="path-separator">
+
+          <div class="path-slider">
+            <div class="slider-header">
+              <span class="slider-label">Retire at age</span>
+              <span class="slider-value" id="val-path-age">—</span>
+            </div>
+            <input type="range" class="slider-input" id="slider-path-age"
+                   min="55" max="80" step="1" value="67"
+                   aria-label="Retirement age adjustment">
+            <p class="path-description" id="desc-age"></p>
+          </div>
+
+        </div><!-- /path-forward -->
+
+        <!-- Progress tracker (for navigating back) -->
+        <div class="progress-tracker" role="navigation" aria-label="Progress"></div>
+
+        <!-- CTA -->
+        <div class="result-cta">
+          <p class="cta-text">Let's talk about how to get there.</p>
+          <a href="#who" class="cta-btn" aria-label="Scroll to learn more">↓</a>
+        </div>
+
+      </div><!-- /result-card -->
+
+    </div><!-- /screen-result -->
+
+  </section><!-- /hero -->
+
+
+  <!-- ══ Brand Page ═════════════════════════════════════════════════ -->
+  <div id="brand-page">
+
+    <hr class="section-rule" aria-hidden="true">
+
+    <div class="content-sections">
+
+      <section id="who" class="content-section">
+        <h2 class="section-header">Who it's for</h2>
+        <p class="section-body">Marcus's prospects. Dual-income families, 35–55, about to sit down with him for the first time — already asking "are we okay?" This answers it before the meeting starts.</p>
+      </section>
+
+      <section id="what" class="content-section">
+        <h2 class="section-header">What it does</h2>
+        <p class="section-body">Five questions framed as a camping trip. Are you on track to make camp before dark? If not, live sliders show what closing the gap actually looks like.</p>
+      </section>
+
+      <section id="design" class="content-section">
+        <h2 class="section-header">Design Choices</h2>
+        <p class="section-body">The metaphor keeps hard news from feeling like a verdict. When someone's behind, they get a route adjustment, not a final answer. The visual arc — dawn to dusk to campfire — earns the emotional weight without stating it.</p>
+      </section>
+
+    </div><!-- /content-sections -->
+
+    <hr class="section-rule" aria-hidden="true">
+
+    <div class="process-section">
+      <h2 class="section-header" id="process">Process</h2>
+      <p class="section-body">This was a fun challenge and I wanted to make something fun and not at all financial feeling, because dealing with money can be scary and a bit impersonal, so I also wanted to connect it to a relatable emotional journey.</p>
+      <p class="section-body" style="margin-top:1em">To create the final output I used the Workspace Builder from Jake's GitHub repo and used Marcus's and the Competition's brief as the input context. Then I described the goal: to create an interactive journey similar to a choose your own adventure or a twine. Then I used the brand-voice skill from Anthropic to extract Marcus's brand voice and with Claude laid out a 5 stage plan to get to the final output. After that it was a matter of following the stage setups one by one, answering Claude's questions and tweaking the spec for each stage. I outputted 2 times because of a silly mistake but other than that it was a fairly straightforward process. Note: I paid zero attention to the math except for the visual progression of the imagery.</p>
+      <p class="section-body" style="margin-top:1em">A few takeaways:</p>
+      <ul class="section-body" style="margin-top:0.5em;padding-left:1.4em">
+        <li>The ICM model of setting up this workflow was pretty amazing — I got from stage 1 to 4 in one shot.</li>
+        <li>I learned a hard lesson of making sure to check the output, because I had said it must deploy without dependencies and it wrote everything to a single HTML file, which ate my tokens like nothing.</li>
+        <li>I had to wait for usage to reset before fixing the output issue, and then the 2nd attempt was much better.</li>
+      </ul>
+    </div>
+
+  </div><!-- /brand-page -->
+
+
+  <!-- ══ Footer ═════════════════════════════════════════════════════ -->
+  <footer id="site-footer">Roc Lee</footer>
+
+
+  <!-- ══ Scripts (defer) ════════════════════════════════════════════ -->
+  <script src="js/hiker.js"  defer></script>
+  <script src="js/calc.js"   defer></script>
+  <script src="js/stages.js" defer></script>
+  <script src="js/app.js"    defer></script>
+
+</body>
+</html>
